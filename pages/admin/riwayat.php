@@ -1,0 +1,7 @@
+<?php
+require __DIR__.'/../../includes/app.php';require_admin();
+$rows=db()->query('SELECT r.status_baru,r.berubah_pada,o.id_pesanan,o.kode_pesanan,p.nama AS pelanggan,a.nama AS petugas FROM riwayat_status r JOIN pesanan o ON o.id_pesanan=r.id_pesanan JOIN pelanggan p ON p.id_pelanggan=o.id_pelanggan LEFT JOIN pengelola a ON a.id_pengelola=r.id_pengelola ORDER BY r.berubah_pada DESC,r.id_riwayat DESC LIMIT 300')->fetchAll();
+admin_page_head('Riwayat Status','Rekam jejak perubahan proses laundry. Bukan riwayat pembayaran.');
+?>
+<section class="admin-card"><div class="filter-row"><div class="search-input">⌕ &nbsp;<input type="search" data-simple-filter aria-label="Cari riwayat" placeholder="Cari kode atau nama pelanggan"></div><span class="date-badge">Maksimal 300 riwayat terbaru</span></div><div class="table-wrap"><table class="data-table simple-filter-table"><thead><tr><th>Waktu</th><th>Kode</th><th>Pelanggan</th><th>Status</th><th>Petugas</th><th>Aksi</th></tr></thead><tbody><?php foreach($rows as $r):?><tr><td><?=h(waktu($r['berubah_pada']))?></td><td class="code-cell"><?=h($r['kode_pesanan'])?></td><td><?=h($r['pelanggan'])?></td><td><?=status_badge($r['status_baru'])?></td><td><?=h($r['petugas']??'Sistem')?></td><td><a href="detail-pesanan.php?id=<?=(int)$r['id_pesanan']?>" class="action-link">Detail →</a></td></tr><?php endforeach;?><?php if(!$rows):?><tr><td colspan="6">Belum ada riwayat status.</td></tr><?php endif;?></tbody></table></div></section>
+<?php require __DIR__.'/../../includes/footer.php'; ?>

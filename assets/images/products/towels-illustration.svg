@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-label="Ilustrasi handuk laundry">
+<defs><linearGradient id="r" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#e61d38"/><stop offset="1" stop-color="#760b18"/></linearGradient><linearGradient id="w" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#dfd9d6"/></linearGradient><filter id="s"><feGaussianBlur stdDeviation="11"/></filter></defs>
+<ellipse cx="544" cy="630" rx="350" ry="51" fill="#451018" opacity=".3" filter="url(#s)"/>
+<g transform="translate(140 220) rotate(-4 400 250)">
+<rect x="55" y="315" width="650" height="115" rx="42" fill="url(#r)"/><path d="M90 345q290 26 560-5" fill="none" stroke="#f26b78" stroke-width="9" opacity=".35"/>
+<rect x="33" y="216" width="687" height="115" rx="45" fill="url(#w)"/><path d="M66 255q290 31 607-4" fill="none" stroke="#eee6e1" stroke-width="9"/>
+<rect x="90" y="120" width="602" height="112" rx="37" fill="url(#r)"/><path d="M130 151q240 35 520-4" fill="none" stroke="#fc8190" stroke-width="10" opacity=".4"/>
+<rect x="85" y="36" width="616" height="102" rx="41" fill="url(#w)"/><path d="M134 66q245 19 525-7" fill="none" stroke="#e5dfdd" stroke-width="12"/>
+</g>
+<g fill="#fff" opacity=".7"><circle cx="124" cy="171" r="6"/><circle cx="157" cy="135" r="10"/><circle cx="778" cy="190" r="7"/><circle cx="726" cy="123" r="9"/></g>
+</svg>

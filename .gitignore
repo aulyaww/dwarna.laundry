@@ -1,0 +1,17 @@
+# Jangan unggah rahasia, konfigurasi dan cache lokal
+.env
+.env.*
+!.env.example
+config/database.local.php
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db
+node_modules/
+vendor/
+# Skrip setup hanya untuk localhost awal; jangan commit
+/setup-admin.php
+# File pengujian koneksi sementara
+/test-koneksi.php
+/database/backup*.sql

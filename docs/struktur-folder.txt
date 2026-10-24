@@ -1,0 +1,25 @@
+dwarna-laundry/
+├── assets/
+│   ├── css/style.css
+│   ├── js/main.js
+│   └── images/
+├── config/database.php
+├── database/schema.sql
+├── database/seed.sql
+├── includes/app.php
+├── includes/header.php
+├── includes/navbar.php
+├── includes/footer.php
+├── pages/
+│   ├── cara-order.php
+│   ├── cek-status.php
+│   ├── kontak.php
+│   └── admin/
+│       ├── login.php,logout.php,dashboard.php
+│       ├── pelanggan.php,tambah-pelanggan.php
+│       ├── pesanan.php,tambah-pesanan.php,detail-pesanan.php
+│       ├── riwayat.php,notifikasi.php,catatan-sementara.php
+├── index.php
+├── setup-admin.php (hanya untuk localhost; hapus setelah dibuat)
+├── README.md
+└── .gitignore
