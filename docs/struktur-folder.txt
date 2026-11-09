@@ -18,7 +18,7 @@ dwarna-laundry/
 │       ├── login.php,logout.php,dashboard.php
 │       ├── pelanggan.php,tambah-pelanggan.php
 │       ├── pesanan.php,tambah-pesanan.php,detail-pesanan.php
-│       ├── riwayat.php,notifikasi.php,catatan-sementara.php
+│       ├── riwayat.php,notifikasi.php
 ├── index.php
 ├── setup-admin.php (hanya untuk localhost; hapus setelah dibuat)
 ├── README.md

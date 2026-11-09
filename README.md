@@ -6,7 +6,7 @@ Proyek web untuk **dWarna Laundry Palopo**. Dibangun sebagai bagian dari Tugas 6
 
 - **Publik / tanpa login**: beranda, informasi layanan, cara order, kontak, serta **cek status** menggunakan kode pesanan + nomor WhatsApp yang sesuai.
 - **Admin bersama / wajib login**: dashboard, data pelanggan, tambah pelanggan, daftar pesanan, tambah pesanan, detail pesanan, ubah status (Diterima → Diproses → Dikemas → Selesai), dan riwayat status.
-- **Operasional pendukung**: penyusunan pesan WhatsApp selesai untuk dikirim manual dan pencatatan kembali catatan offline setelah gangguan.
+- **Operasional pendukung**: penyusunan pesan WhatsApp selesai untuk dikirim manual. Jika sistem mengalami gangguan, petugas melakukan pencatatan di buku/kertas, kemudian memasukkan data melalui fitur Tambah Pesanan setelah sistem kembali normal.
 - **Tidak ada fitur pembayaran**, pembayaran online, laporan keuangan, stok, absensi, multi-cabang, atau sistem loyalitas.
 
 ## Tech Stack
@@ -19,7 +19,7 @@ PHP native (PDO + session), HTML, CSS responsif, JavaScript vanilla, MySQL/Maria
 2. Salin folder `dwarna-laundry` ke `C:\xampp\htdocs\dwarna-laundry` (pastikan `index.php` ada langsung di dalam folder ini).
 3. Jalankan **Apache** dan **MySQL** melalui XAMPP.
 4. Jika database **belum ada**, di phpMyAdmin import `database/schema.sql`. Opsional: import `database/seed.sql` hanya ke database baru yang kosong; berisi data fiktif.
-5. Jika database **sudah ada dan berisi 7 tabel**, **jangan mengimpor ulang** `schema.sql` atau `seed.sql`. Sistem ini menggunakan tabel: `pengelola`, `pelanggan`, `layanan`, `pesanan`, `riwayat_status`, `notifikasi`, `catatan_sementara`.
+5. Jika database **sudah ada dan berisi data**, **jangan mengimpor ulang** `schema.sql` atau `seed.sql`. Sistem menggunakan 6 tabel utama: `pengelola`, `pelanggan`, `layanan`, `pesanan`, `riwayat_status`, dan `notifikasi`.
 6. Koneksi default berada di `config/database.php`: host `127.0.0.1`, database `dwarna_laundry`, user `root`, password kosong (default XAMPP). Bila berbeda, salin `config/database.local.example.php` menjadi `config/database.local.php` dan isi konfigurasi yang sesuai. File `.local.php` tidak boleh diunggah ke Git.
 7. Buka website publik: `http://localhost/dwarna-laundry/`.
 8. **Akun Admin bersama**: untuk basis data lama dengan akun pemilik, import sekali `database/migrasi_admin_tunggal.sql` (setelah backup), lalu login memakai username/password lama. Buka menu **Akun Admin** untuk menggantinya memakai username/password baru, tanpa menghapus relasi pesanan.
@@ -63,8 +63,7 @@ dwarna-laundry/
 - Form login membatasi percobaan gagal per sesi (5 kali, 15 menit). Ini **belum** perlindungan menyeluruh untuk deployment internet terbuka; untuk produksi tambahkan rate limit IP, HTTPS, backup, audit, dan pengaturan keamanan server.
 - Jangan pernah unggah `config/database.local.php`, database dump yang berisi data pelanggan asli, atau file `setup-admin.php` ke GitHub publik.
 - Dalam mode lokal ini, daftar pelanggan/pesanan yang diimport dari `seed.sql` bersifat fiktif. Perlu uji pengguna, review mitra, dan pemeriksaan keamanan sebelum penggunaan operasional sesungguhnya.
-- **Catatan sementara** menyimpan transkripsi catatan manual setelah server kembali online; fungsi menyinkronkan catatan menjadi pesanan otomatis belum tersedia.
-- Jika halaman publik terlihat tetapi login gagal, periksa modul PHP **pdo_mysql**, koneksi XAMPP, tujuh tabel final, dan kecocokan username/password.
+- Jika halaman publik terlihat tetapi login gagal, periksa modul PHP **pdo_mysql**, koneksi XAMPP, keberadaan enam tabel utama, serta kecocokan username/password.
 
 ## Bukti untuk Laporan Tugas 6
 

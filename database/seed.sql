@@ -1,5 +1,5 @@
 -- dWarna Laundry Palopo - DATA CONTOH untuk schema.sql final In-Scope (7 tabel)
--- Cocok dengan: pengelola, pelanggan, layanan, pesanan, riwayat_status, notifikasi, catatan_sementara.
+-- Cocok dengan: pengelola, pelanggan, layanan, pesanan, riwayat_status, notifikasi.
 -- Data SEMU untuk testing, bukan data operasional mitra atau ERD Tugas 4 final.
 -- HANYA untuk instalasi baru yang masih KOSONG; JANGAN import pada database yang sudah berisi data.
 -- Jangan gunakan seed.sql dan migrasi_01_layanan.sql VERSI LAMA bersama file ini.

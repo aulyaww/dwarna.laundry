@@ -9,6 +9,7 @@ $isLogin=$isLogin ?? false;
 <meta name="description" content="dWarna Laundry Palopo, laundry praktis dengan informasi layanan dan pelacakan status pesanan.">
 <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8') ?> | dWarna Laundry</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/jpeg" href="<?= $rootPrefix ?>assets/images/logo/logo-mitra.jpg?v=2">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="<?= $rootPrefix ?>assets/css/style.css?v=99">
 </head><body class="<?= $isLogin ? 'login-body' : ($isAdmin ? 'admin-body' : 'public-body') ?>">

@@ -83,23 +83,3 @@ CREATE TABLE IF NOT EXISTS notifikasi (
   CONSTRAINT fk_notifikasi_pengelola FOREIGN KEY (id_pengelola)
     REFERENCES pengelola(id_pengelola) ON DELETE SET NULL
 ) ENGINE=InnoDB;
-
--- Pencatatan sementara: data yang DIMASUKKAN KEMBALI setelah sistem pulih.
--- Tidak berarti database bisa menerima input ketika MySQL mati.
-CREATE TABLE IF NOT EXISTS catatan_sementara (
-  id_catatan INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  kode_sementara VARCHAR(30) NOT NULL UNIQUE,
-  nama_pelanggan VARCHAR(100) NOT NULL,
-  no_whatsapp VARCHAR(20) NOT NULL,
-  rincian_layanan TEXT NOT NULL,
-  catatan TEXT NULL,
-  id_pengelola INT UNSIGNED NULL,
-  status_sinkronisasi ENUM('Belum','Sudah') NOT NULL DEFAULT 'Belum',
-  id_pesanan INT UNSIGNED NULL UNIQUE,
-  dibuat_pada TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  disinkronkan_pada DATETIME NULL,
-  CONSTRAINT fk_catatan_pengelola FOREIGN KEY (id_pengelola)
-    REFERENCES pengelola(id_pengelola) ON DELETE SET NULL,
-  CONSTRAINT fk_catatan_pesanan FOREIGN KEY (id_pesanan)
-    REFERENCES pesanan(id_pesanan) ON DELETE SET NULL
-) ENGINE=InnoDB;

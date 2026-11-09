@@ -13,7 +13,6 @@ $menu = [
     ['pelanggan.php', '<i class="fa-solid fa-users"></i>', 'Pelanggan'],
     ['riwayat.php', '<i class="fa-solid fa-clock-rotate-left"></i>', 'Riwayat'],
     ['notifikasi.php', '<i class="fa-solid fa-bell"></i>', 'Pemberitahuan'],
-    ['catatan-sementara.php', '<i class="fa-solid fa-clipboard"></i>', 'Catatan Sementara'],
     ['pengaturan-akun.php', '<i class="fa-solid fa-user-gear"></i>', 'Akun Admin']
 ];
 
@@ -63,10 +62,6 @@ $menu = [
   <a class="<?= ($pageTitle==='Cek Status')?'current':'' ?>" href="<?= $rootPrefix ?>pages/cek-status.php">Cek Status</a>
   <a class="<?= ($pageTitle==='Kontak')?'current':'' ?>" href="<?= $rootPrefix ?>pages/kontak.php">Kontak</a>
 
-<a class="btn btn-sm nav-cta" href="<?= $rootPrefix ?>pages/kontak.php">
-    <i class="fa-solid fa-comment-dots"></i>
-    Pesan Sekarang
-</a>
  </nav>
 </div></header>
 <?php endif; ?>

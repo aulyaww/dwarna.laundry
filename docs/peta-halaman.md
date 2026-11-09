@@ -18,7 +18,7 @@ Satu website, dua area akses dan satu database `dwarna_laundry` (7 tabel).
 | Tambah Pelanggan | `pages/admin/tambah-pelanggan.php` | Sesi pengelola |
 | Riwayat Status | `pages/admin/riwayat.php` | Sesi pengelola |
 | Pemberitahuan Selesai | `pages/admin/notifikasi.php` | Sesi pengelola, pengiriman manual |
-| Catatan Sementara | `pages/admin/catatan-sementara.php` | Sesi pengelola |
+
 
 Warna: `#D90B20`, `#96151E`, `#FDEBED`, `#FFFFFF`, `#F9FAFB`, `#1F2937`. Tipografi: Inter.
 
